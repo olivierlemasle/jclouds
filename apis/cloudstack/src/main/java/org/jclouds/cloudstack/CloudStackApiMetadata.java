@@ -31,7 +31,7 @@ import com.google.auto.service.AutoService;
 import com.google.common.collect.ImmutableSet;
 import com.google.inject.Module;
 /**
- * Implementation of {@link ApiMetadata} for Citrix/Apache CloudStack api.
+ * Implementation of {@link ApiMetadata} for Apache CloudStack/Citrix CloudPlatform API.
  */
 @AutoService(ApiMetadata.class)
 public class CloudStackApiMetadata extends BaseHttpApiMetadata<CloudStackApi> {
@@ -62,12 +62,12 @@ public class CloudStackApiMetadata extends BaseHttpApiMetadata<CloudStackApi> {
       @SuppressWarnings("deprecation")
       protected Builder() {
          id("cloudstack")
-         .name("Citrix CloudStack API")
+         .name("Apache CloudStack API")
          .identityName("API Key")
          .credentialName("Secret Key")
-         .documentation(URI.create("http://download.cloud.com/releases/2.2.0/api_2.2.12/TOC_User.html"))
+         .documentation(URI.create("https://cloudstack.apache.org/api/apidocs-4.5/TOC_Root_Admin.html"))
          .defaultEndpoint("http://localhost:8080/client/api")
-         .version("2.2")
+         .version("4.5")
          .view(typeToken(CloudStackContext.class))
          .defaultProperties(CloudStackApiMetadata.defaultProperties())
          .defaultModules(ImmutableSet.<Class<? extends Module>> builder()

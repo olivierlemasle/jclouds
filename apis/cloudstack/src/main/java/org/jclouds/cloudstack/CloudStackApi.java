@@ -46,10 +46,10 @@ import org.jclouds.cloudstack.features.ZoneApi;
 import org.jclouds.rest.annotations.Delegate;
 
 /**
- * Provides synchronous access to CloudStack.
+ * Provides synchronous access to Apache CloudStack.
  * <p/>
  *
- * @see <a href="http://download.cloud.com/releases/2.2.0/api_2.2.12/TOC_User.html" />
+ * @see <a href="https://cloudstack.apache.org/api/apidocs-4.5/TOC_Root_Admin.html" />
  */
 public interface CloudStackApi extends Closeable {
    /**
