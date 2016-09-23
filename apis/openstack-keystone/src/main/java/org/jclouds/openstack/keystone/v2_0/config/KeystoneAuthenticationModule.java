@@ -234,6 +234,12 @@ public class KeystoneAuthenticationModule extends AbstractModule {
       return authenticationMethods.get(credentialType);
    }
 
+   @Provides
+   @Singleton
+   protected final CredentialType credentialsRetryable(Function<Credentials, Access> getAccess) {
+      return CredentialTypes.credentialTypeObjectOf(getAccess);
+   }
+
    // TODO: what is the timeout of the session token? modify default accordingly
    // PROPERTY_SESSION_INTERVAL is default to 60 seconds, but we have this here at 11 hours for now.
    @Provides

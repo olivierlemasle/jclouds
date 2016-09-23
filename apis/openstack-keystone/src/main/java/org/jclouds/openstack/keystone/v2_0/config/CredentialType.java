@@ -37,4 +37,9 @@ public @interface CredentialType {
     * 
     */
    String value();
+
+   /**
+    * True if the credentials can be used multiple times, so that a request can be retried.
+    */
+   boolean retryable() default true;
 }

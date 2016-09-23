@@ -27,7 +27,7 @@ import org.jclouds.openstack.keystone.v2_0.functions.internal.BaseAuthenticator;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-@CredentialType(CredentialTypes.TOKEN_CREDENTIALS)
+@CredentialType(value = CredentialTypes.TOKEN_CREDENTIALS, retryable = false)
 @Singleton
 public class AuthenticateTokenCredentials extends BaseAuthenticator<TokenCredentials> {
    protected final AuthenticationApi api;
